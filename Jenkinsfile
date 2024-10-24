@@ -20,5 +20,9 @@ pipeline {
                 '''
             }
         }
+
+        stage('Test') {
+            sh 'test -f build/index.html'
+        }
     }
 }
